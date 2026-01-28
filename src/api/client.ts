@@ -1,0 +1,22 @@
+import axios from 'axios';
+
+const BASE_URL = 'http://192.168.1.108:5000/api'; 
+
+export const apiClient = axios.create({
+  baseURL: BASE_URL,
+  timeout: 10000, 
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  },
+});
+
+apiClient.interceptors.request.use(
+  (config) => {
+    console.log(` Sending ${config.method?.toUpperCase()} to: ${config.url}`);
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
