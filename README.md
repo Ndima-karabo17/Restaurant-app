@@ -125,9 +125,45 @@ npx expo install @expo/vector-icons/Ionicons
 
 
 
+## Database Instruction
 
 
+Database Setup (PostgreSQL)
+-
+Before running the app, you must set up the database schema to handle the UUID relationship between Users and Orders.
+
+Open pgAdmin4.
+
+Create a new database named restaurant_db.
+
+Open the Query Tool and paste the code from database.sql
 
 
+Backend Configuration
+-
+Navigate to the server folder.
 
+Create a .env file and add your database credentials:
 
+DB_USER=postgres
+DB_PASSWORD=your_password
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=restaurant_db
+PORT=5000
+
+Run the server
+
+npm install
+
+npm run dev
+
+Database Schema Logic
+-
+The database is built on a Referential Integrity model:
+
+Users Table: Every customer is assigned a unique UUID.
+
+Orders Table: Every order contains a user_id that must match a valid user in the Users table.
+
+Cascading Deletes: If a user is removed, their order history is automatically cleaned up to prevent database clutter.
