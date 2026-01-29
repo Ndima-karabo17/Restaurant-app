@@ -88,11 +88,30 @@ Look for the message: You should see  "Server is live!" in the terminal.
 
 Keep this window open! If you close it, the "pipes" are cut and the apps will stop working.
 
+
+Step 3: Connect the "Menu" (Mobile App)
+-
+Now we tell the phone where to look for the food.
+
+Find your Computer's Address (IP):
+
+On Windows: Search for cmd, type ipconfig, and look for IPv4 Address (e.g., 192.168.1.105).
+
+Update the Address: In your Mobile App code, find the file where the "URL" is saved (usually api/client.ts) and make sure it uses that IP address.
+
+Open a new terminal for the Mobile folder and type:
+
+npm install
+
+npx expo start
+Open the App: Use your phone to scan the QR code that appears on your screen (you'll need the Expo Go app from the Play Store).
+
 Dependencies to install
 -
 npm install
 
 npx expo install @expo/vector-icons/Ionicons
+
 
 
 
