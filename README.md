@@ -41,11 +41,28 @@ It remembers every user's name.
 It keeps the master list of food and prices.
 
 It stores every order ever made so you never lose a receipt.
+
+
+How to Get It Running
+If you were setting this up in a real restaurant, here is what you would do:
+
+1. Stock the Store Room (Database)
+You need to put food on the menu first! We use a tool called pgAdmin to type in our dishes (like "Cheeseburger - R85").
+
+2. Turn on the "Internet Pipe" (The Server)
+The server is the middleman. It sits between the phone and the database. You turn it on by typing a command on your computer. Once it's on, it waits for phones to "call" it.
+
+3. Connect the Phone to the Wi-Fi
+For the phone app to see the menu, it needs to know the "address" of your computer.
+
+Important Note: Both your computer and the phone must be on the same Wi-Fi, or they won't be able to "hear" each other.
+
 Dependencies to install
 -
 npm install
 
 npx expo install @expo/vector-icons/Ionicons
+
 
 
 
