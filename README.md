@@ -106,11 +106,22 @@ npm install
 npx expo start
 Open the App: Use your phone to scan the QR code that appears on your screen (you'll need the Expo Go app from the Play Store).
 
+The terminal will give you a link (usually http://localhost:5173). Hold Ctrl and click that link to open the dashboard in your browser.
+
+How to test if it's working:
+-
+On the Phone: Pull down to refresh. If the food items appear, you are connected!
+
+On the Dashboard: Check if the "Total Orders" card shows a number.
+
+Place an Order: Add a burger to your cart on the phone and hit "Checkout." Then, look at the Dashboard—you should see a new order pop up immediately!
+
 Dependencies to install
 -
 npm install
 
 npx expo install @expo/vector-icons/Ionicons
+
 
 
 
