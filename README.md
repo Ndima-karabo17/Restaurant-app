@@ -81,13 +81,15 @@ Open your Backend folder.
 
 Open a Terminal inside VS Code (Go to Terminal -> New Terminal).
 
-Type this command and press Enter:
+Type this command and press Enter: npm install
+npm run dev
 
 Dependencies to install
 -
 npm install
 
 npx expo install @expo/vector-icons/Ionicons
+
 
 
 
