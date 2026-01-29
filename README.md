@@ -84,11 +84,16 @@ Open a Terminal inside VS Code (Go to Terminal -> New Terminal).
 Type this command and press Enter: npm install
 npm run dev
 
+Look for the message: You should see  "Server is live!" in the terminal.
+
+Keep this window open! If you close it, the "pipes" are cut and the apps will stop working.
+
 Dependencies to install
 -
 npm install
 
 npx expo install @expo/vector-icons/Ionicons
+
 
 
 
