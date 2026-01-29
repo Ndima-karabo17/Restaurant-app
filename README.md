@@ -32,10 +32,20 @@ Seeing the Food: The app asks the server, "What do we have today?" The server ch
 Ordering: When a customer clicks "Add to Cart," the app remembers their choices. When they hit "Order," it sends a ticket straight to the manager.
 
 
+The Database (The Store Room)
+-
+This is where all the information lives safely.
+
+It remembers every user's name.
+
+It keeps the master list of food and prices.
+
+It stores every order ever made so you never lose a receipt.
 Dependencies to install
 -
 npm install
 
 npx expo install @expo/vector-icons/Ionicons
+
 
 
