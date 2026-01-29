@@ -146,10 +146,15 @@ Navigate to the server folder.
 Create a .env file and add your database credentials:
 
 DB_USER=postgres
+
 DB_PASSWORD=your_password
+
 DB_HOST=localhost
+
 DB_PORT=5432
+
 DB_NAME=restaurant_db
+
 PORT=5000
 
 Run the server
@@ -167,3 +172,4 @@ Users Table: Every customer is assigned a unique UUID.
 Orders Table: Every order contains a user_id that must match a valid user in the Users table.
 
 Cascading Deletes: If a user is removed, their order history is automatically cleaned up to prevent database clutter.
+
