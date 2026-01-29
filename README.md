@@ -173,3 +173,51 @@ Orders Table: Every order contains a user_id that must match a valid user in the
 
 Cascading Deletes: If a user is removed, their order history is automatically cleaned up to prevent database clutter.
 
+What is need in the pgAdmin4
+-
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+DROP TABLE IF EXISTS orders CASCADE;
+
+DROP TABLE IF EXISTS users CASCADE;
+
+CREATE TABLE users (
+
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    
+    name VARCHAR(100) NOT NULL,
+    
+    email VARCHAR(255) UNIQUE NOT NULL,
+    
+    contact VARCHAR(20),
+    
+    address TEXT,
+    
+    card VARCHAR(20),
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE orders (
+
+    id SERIAL PRIMARY KEY,
+    
+    user_id UUID NOT NULL, 
+    
+    items TEXT NOT NULL,
+    
+    total_price DECIMAL(10,2) DEFAULT 0.00,
+    
+    status VARCHAR(20) DEFAULT 'Pending' CHECK (status IN ('Pending', 'Preparing', 'Delivered', 'Cancelled')),
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    
+    CONSTRAINT fk_user_order 
+    
+      FOREIGN KEY(user_id) 
+      
+      REFERENCES users(id)
+      
+      ON DELETE CASCADE
+);
