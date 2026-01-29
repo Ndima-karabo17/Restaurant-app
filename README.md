@@ -175,12 +175,15 @@ Cascading Deletes: If a user is removed, their order history is automatically cl
 
 What is need in the pgAdmin4
 -
-
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+DROP TABLE IF EXISTS order_items CASCADE;
 
 DROP TABLE IF EXISTS orders CASCADE;
 
 DROP TABLE IF EXISTS users CASCADE;
+
+DROP TABLE IF EXISTS products CASCADE;
 
 CREATE TABLE users (
 
@@ -199,13 +202,27 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE orders (
+CREATE TABLE products (
 
     id SERIAL PRIMARY KEY,
     
-    user_id UUID NOT NULL, 
+    name VARCHAR(100) NOT NULL,
     
-    items TEXT NOT NULL,
+    description TEXT,
+    
+    price DECIMAL(10,2) NOT NULL,
+    
+    category VARCHAR(50),
+    
+    is_available BOOLEAN DEFAULT TRUE,
+    
+    image_url TEXT
+);
+
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    
+    user_id UUID NOT NULL, 
     
     total_price DECIMAL(10,2) DEFAULT 0.00,
     
@@ -217,7 +234,20 @@ CREATE TABLE orders (
     
       FOREIGN KEY(user_id) 
       
-      REFERENCES users(id)
+      REFERENCES users(id) 
       
       ON DELETE CASCADE
+);
+
+CREATE TABLE order_items (
+
+    id SERIAL PRIMARY KEY,
+    
+    order_id INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
+    
+    product_id INTEGER NOT NULL REFERENCES products(id) ON DELETE CASCADE,
+    
+    quantity INTEGER DEFAULT 1,
+    
+    subtotal DECIMAL(10,2) NOT NULL
 );
