@@ -70,11 +70,25 @@ Make sure your server is connected (you might have to enter your password).
 Ensure your database (e.g., restaurant_db) actually has the tables (products, orders, users).
 
 If you haven't added food yet, the app will look empty!
+
+Step 2: Start the "Middleman" (Backend Server)
+-
+This part handles the communication between the database and the apps.
+
+Open VS Code.
+
+Open your Backend folder.
+
+Open a Terminal inside VS Code (Go to Terminal -> New Terminal).
+
+Type this command and press Enter:
+
 Dependencies to install
 -
 npm install
 
 npx expo install @expo/vector-icons/Ionicons
+
 
 
 
