@@ -57,11 +57,25 @@ For the phone app to see the menu, it needs to know the "address" of your comput
 
 Important Note: Both your computer and the phone must be on the same Wi-Fi, or they won't be able to "hear" each other.
 
+# How to run app and what are needed (friendly and simple instruction)
+
+Step 1: Start the "Store Room" (PostgreSQL)
+-
+Before anything else, your database must be "awake" so the server can talk to it.
+
+Open pgAdmin 4 on your computer.
+
+Make sure your server is connected (you might have to enter your password).
+
+Ensure your database (e.g., restaurant_db) actually has the tables (products, orders, users).
+
+If you haven't added food yet, the app will look empty!
 Dependencies to install
 -
 npm install
 
 npx expo install @expo/vector-icons/Ionicons
+
 
 
 
