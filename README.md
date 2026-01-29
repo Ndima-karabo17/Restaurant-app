@@ -1,4 +1,4 @@
-# RESTAURANT APPLICATION - React Native the food delivery
+# RESTAURANT APPLICATION
 A comprehensive mobile food ordering application built with React Native. This app allows users to browse menus, customize their meals with side options/extras,
 and manage their profile and orders. It also includes a dedicated Admin Dashboard for restaurant management and data analytics.
 
@@ -23,6 +23,13 @@ Secure payment processing via integrated API (test mode).
 Automatic order linking to user profiles via UID.
 
 
+The Mobile App (The Customer's Menu)
+-
+This is what your customers see. It’s like a digital menu that they carry in their pocket.
+
+Seeing the Food: The app asks the server, "What do we have today?" The server checks the Store Room (Database) and sends back the burgers, pizzas, and drinks.
+
+Ordering: When a customer clicks "Add to Cart," the app remembers their choices. When they hit "Order," it sends a ticket straight to the manager.
 
 
 Dependencies to install
@@ -30,4 +37,5 @@ Dependencies to install
 npm install
 
 npx expo install @expo/vector-icons/Ionicons
+
 
