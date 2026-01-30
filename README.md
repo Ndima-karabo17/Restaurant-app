@@ -251,3 +251,16 @@ CREATE TABLE order_items (
     
     subtotal DECIMAL(10,2) NOT NULL
 );
+
+
+Screenshots of mobile app
+-
+
+![profile](https://github.com/user-attachments/assets/b9960dff-b060-40fa-ae25-73f4a4bd6511)
+![Logout_Confirmation](https://github.com/user-attachments/assets/473b57dd-c4ae-489e-b98b-781f6996e3cb)
+![LoginPage](https://github.com/user-attachments/assets/68c9a39a-6ad1-4dab-b782-de6c908ea057)
+![DefaultCartPage](https://github.com/user-attachments/assets/47e713d9-1944-462f-903d-cc176ef57e22)
+![Default_menuPage](https://github.com/user-attachments/assets/7a2aa9d4-65ea-4d12-aeb6-8a47ec2456da)
+![createAccountPage](https://github.com/user-attachments/assets/5cae14f6-7928-4b4f-ad0a-f8ff35f07cd6)
+
+
