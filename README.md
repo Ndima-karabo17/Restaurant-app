@@ -253,6 +253,11 @@ CREATE TABLE order_items (
 );
 
 
+Design Link
+-
+https://www.figma.com/design/h8LHOeaBn6wnRxPXB9zSz8/Restaurant-App?node-id=0-1&p=f&t=86wsF8J4pAOPHJtw-0
+
+
 Screenshots of mobile app
 -
 
@@ -262,5 +267,6 @@ Screenshots of mobile app
 ![DefaultCartPage](https://github.com/user-attachments/assets/47e713d9-1944-462f-903d-cc176ef57e22)
 ![Default_menuPage](https://github.com/user-attachments/assets/7a2aa9d4-65ea-4d12-aeb6-8a47ec2456da)
 ![createAccountPage](https://github.com/user-attachments/assets/5cae14f6-7928-4b4f-ad0a-f8ff35f07cd6)
+
 
 
